@@ -114,18 +114,7 @@ public class ReportIssueDialogFragment extends DialogFragment {
         final ReportIssueDialogBuilder builder = new ReportIssueDialogBuilder(activity, titleResId, messageResId) {
             @Override
             protected String subject() {
-                final StringBuilder builder = new StringBuilder(subject).append(": ");
-                final PackageInfo pi = application.packageInfo();
-                builder.append(WalletApplication.versionLine(pi));
-                final String installerPackageName = application.getPackageManager()
-                        .getInstallerPackageName(pi.packageName);
-                if (installerPackageName != null)
-                    builder.append(", installer ").append(installerPackageName);
-                builder.append(", android ").append(Build.VERSION.RELEASE);
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
-                    builder.append(" (").append(Build.VERSION.SECURITY_PATCH).append(")");
-                builder.append(", ").append(Build.BRAND);
-                return builder.toString();
+                return subject + ": " + WalletApplication.versionLine(application.packageInfo());
             }
 
             @Override

@@ -11,11 +11,12 @@ dependencies {
 
 android {
     compileSdkVersion 'android-15'
-    buildToolsVersion '28.0.3'
+    buildToolsVersion '27.0.3'
 
     lintOptions { abortOnError false }
 
     defaultConfig {
+        vectorDrawables.useSupportLibrary = true
         dexOptions {
             preDexLibraries false
         }
