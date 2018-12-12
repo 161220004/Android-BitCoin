@@ -444,6 +444,10 @@ public final class WalletActivity extends AbstractWalletActivity {
         ScanActivity.startForResult(this, clickView, WalletActivity.REQUEST_CODE_SCAN);
     }
 
+    public void handleChart() {
+        startActivity(new Intent(this, ChartActivity.class));
+    }
+
     public void handleBackupWallet() {
         BackupWalletDialogFragment.show(getSupportFragmentManager());
     }

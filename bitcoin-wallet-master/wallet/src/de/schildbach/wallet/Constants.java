@@ -130,7 +130,7 @@ public final class Constants {
 
     /** Donation address for tip/donate action. */
     public static final String DONATION_ADDRESS = NETWORK_PARAMETERS.getId().equals(NetworkParameters.ID_MAINNET)
-            ? "11b3CkMi8yFjcb13bYHhzZQmoMMPphNEp" : null;
+            ? "182Di1dqanjhNiphpNfrBRtKtdiUQtpgfb" : null;
 
     /** Recipient e-mail address for reports. */
     public static final String REPORT_EMAIL = "bitcoin.wallet.developers@gmail.com";
@@ -156,7 +156,7 @@ public final class Constants {
     public static final BaseEncoding HEX = BaseEncoding.base16().lowerCase();
 
     public static final String SOURCE_URL = "https://github.com/bitcoin-wallet/bitcoin-wallet";
-    public static final String BINARY_URL = "https://github.com/bitcoin-wallet/bitcoin-wallet/releases";
+    public static final String BINARY_URL = "https://wallet.schildbach.de/";
     public static final String MARKET_APP_URL = "market://details?id=%s";
     public static final String WEBMARKET_APP_URL = "https://play.google.com/store/apps/details?id=%s";
 
@@ -170,9 +170,9 @@ public final class Constants {
     public static final long DELAYED_TRANSACTION_THRESHOLD_MS = 2 * DateUtils.HOUR_IN_MILLIS;
 
     /** A balance above this amount will show a warning */
-    public static final Coin TOO_MUCH_BALANCE_THRESHOLD = Coin.COIN.divide(8);
+    public static final Coin TOO_MUCH_BALANCE_THRESHOLD = Coin.COIN.divide(4);
     /** A balance above this amount will cause the donate option to be shown */
-    public static final Coin SOME_BALANCE_THRESHOLD = Coin.COIN.divide(400);
+    public static final Coin SOME_BALANCE_THRESHOLD = Coin.COIN.divide(200);
 
     public static final int SDK_DEPRECATED_BELOW = Build.VERSION_CODES.KITKAT;
 

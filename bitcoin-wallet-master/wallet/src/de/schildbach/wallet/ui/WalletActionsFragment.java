@@ -72,6 +72,14 @@ public final class WalletActionsFragment extends Fragment {
         });
         CheatSheet.setup(sendQrButton);
 
+        final View chartButton = view.findViewById(R.id.wallet_actions_chart);
+        chartButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(final View v) {
+                activity.handleChart();
+            }
+        });
+
         return view;
     }
 
